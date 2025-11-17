@@ -1,13 +1,25 @@
 import requests
 
-OWM_Endpoint = "https://api.openweathermap.org/data/2.5/weather"
+OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
 api_key = "5fe1bb085f9b36f7607cb07c7436a1b2"
 
 weather_params = {
     "lat": 43.65,
     "lon": -79.38,
     "appid": api_key,
+    "cnt": 4,
 }
 
 response = requests.get(OWM_Endpoint, params=weather_params)
-print(response.json())
+response.raise_for_status()
+
+
+weather_data = response.json()
+
+will_rain = False
+for hour_data in weather_data["list"]:
+    condition_code = hour_data["weather"][0]["id"]
+    if int(condition_code) < 802:
+        will_rain = True
+if will_rain:
+    print("Bring an umbrella.")
