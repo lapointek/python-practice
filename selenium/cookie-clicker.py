@@ -12,7 +12,7 @@ driver.get("https://orteil.dashnet.org/cookieclicker/")
 button = driver.find_element(By.CSS_SELECTOR, value="#bigCookie")
 
 try:
-    language = driver.find_element(by=By.ID, value="langSelect-EN")
+    language = driver.find_element(by=By.ID, value="#langSelect-EN")
     language.click()
     sleep(3)
 except:
