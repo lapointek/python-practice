@@ -1,0 +1,5 @@
+2026/03/06-14:46:11.114 62bd Creating DB /home/kevin/Documents/programming/python-practice/selenium/chrome_profile/Default/IndexedDB/https_appbrewery.github.io_0.indexeddb.leveldb since it was missing.
+2026/03/06-14:46:11.118 62bd Reusing MANIFEST /home/kevin/Documents/programming/python-practice/selenium/chrome_profile/Default/IndexedDB/https_appbrewery.github.io_0.indexeddb.leveldb/MANIFEST-000001
+2026/03/06-14:46:11.638 62bb Level-0 table #5: started
+2026/03/06-14:46:11.660 62bb Level-0 table #5: 850745 bytes OK
+2026/03/06-14:46:11.662 62bb Delete type=0 #3
